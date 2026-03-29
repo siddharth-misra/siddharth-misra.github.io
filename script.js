@@ -1,3 +1,25 @@
+// ===== Dark mode toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function setTheme(dark) {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+
+// Load saved preference, else follow OS
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    setTheme(savedTheme === 'dark');
+} else {
+    setTheme(prefersDark.matches);
+}
+
+themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    setTheme(!isDark);
+});
+
 // ===== Navigation scroll effect =====
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('navToggle');
