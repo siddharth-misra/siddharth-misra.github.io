@@ -35,6 +35,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#awards">Awards</a></li>
             </ul>
@@ -45,6 +46,15 @@
     <section class="hero" id="hero">
         <div class="hero-bg-grid"></div>
         <div class="container hero-content">
+            <div class="hero-photo-wrap animate-in delay-1">
+                <img
+                    class="hero-photo"
+                    src="Siddharth-Misra.JPG"
+                    alt="Portrait of Siddharth Misra"
+                    width="390"
+                    height="472"
+                >
+            </div>
             <h1 class="hero-title animate-in delay-1">
                 Siddharth <span class="gradient-text">Misra</span>
             </h1>
@@ -84,8 +94,8 @@
                     <span class="stat-label">Engineers Managed</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number" data-count="20">20</span><span class="stat-plus">+</span>
-                    <span class="stat-label">Projects Worked On</span>
+                    <span class="stat-number" data-count="7">7</span>
+                    <span class="stat-label">Major Projects</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number" data-count="5">5</span>
@@ -691,6 +701,201 @@
                         <p>National Cadet Corps</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-up">Projects &amp; Contributions</h2>
+            <p class="projects-intro fade-up">
+                A consolidated view of the major platforms and products I have built across fintech, healthcare SaaS,
+                trade finance, ed-tech, and enterprise delivery.
+            </p>
+            <div class="projects-grid">
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>Loan Origination Platform (LOP)</h3>
+                            <p class="project-company">Rahi Platform Technologies</p>
+                        </div>
+                        <span class="project-role-badge">Engineering Manager</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Nov 2025 &mdash; Present</span>
+                        <span>Pune, India</span>
+                        <span>Fintech / Lending</span>
+                    </div>
+                    <p class="project-desc">End-to-end loan origination platform for banks, NBFCs, and fintechs covering application intake, KYC, underwriting, decisioning, e-sign, and disbursal.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> Loan Application &amp; Onboarding, KYC &amp; Document Verification, Credit Underwriting Engine, Decision &amp; Offer Engine, Agreement &amp; e-Sign, Disbursement &amp; Workflow.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>Spring Boot</span><span>Angular</span><span>AWS</span><span>PostgreSQL</span><span>MongoDB</span><span>Kafka</span><span>SQS</span><span>Docker</span><span>OAuth2 / JWT</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Lead a team of <strong>16+ engineers</strong> across frontend, backend, and platform for end-to-end delivery.</li>
+                        <li>Designed the microservices architecture with Kafka and SQS-based event-driven communication.</li>
+                        <li>Integrated KYC, credit bureau, and e-sign providers with retry, idempotency, and audit logging.</li>
+                        <li>Drive AI-first initiatives around document extraction and underwriting workflows.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>ZAIDYN IC Ops (ZICO)</h3>
+                            <p class="project-company">ZS Associates</p>
+                        </div>
+                        <span class="project-role-badge">Senior Lead, Engineering</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Oct 2021 &mdash; Nov 2025</span>
+                        <span>Pune, India</span>
+                        <span>Healthcare SaaS</span>
+                    </div>
+                    <p class="project-desc">Cloud-based incentive compensation platform for pharmaceutical sales organizations covering sales crediting, quota management, payout calculation, and reporting.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> Sales Crediting Engine, Plan &amp; Quota Management, Payout Calculation, Reports &amp; Dashboards, Data Pipelines.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>AWS Lambda</span><span>EMR</span><span>Aurora</span><span>S3</span><span>SQS</span><span>SNS</span><span>Jenkins</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Managed <strong>16+ engineers</strong> across <strong>3 scrum teams</strong> in India and the US.</li>
+                        <li>Owned end-to-end delivery of backend services used by <strong>100,000+ users</strong>.</li>
+                        <li>Reduced sprint duration from 2 weeks to 1 week to improve delivery velocity and feedback cycles.</li>
+                        <li>Drove DevOps improvements that <strong>reduced deployment time by 60%</strong>.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>Finserv MARKETS</h3>
+                            <p class="project-company">Bajaj Finserv Direct Ltd.</p>
+                        </div>
+                        <span class="project-role-badge">Technical Lead</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Jan 2020 &mdash; Oct 2021</span>
+                        <span>Pune, India</span>
+                        <span>Fintech / Payments</span>
+                    </div>
+                    <p class="project-desc">High-throughput payments, rewards, and compliance platform supporting consumer fintech workflows and secure financial integrations.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> BBPS, UPI, Payment Gateway, Rewards Engine, Document e-Sign, VAPT &amp; Webhooks.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>PostgreSQL</span><span>MySQL</span><span>AWS</span><span>Angular</span><span>REST APIs</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Delivered <strong>6 major product integrations</strong> across payments, rewards, compliance, and security.</li>
+                        <li>Led design and development of high-throughput payment and rewards services.</li>
+                        <li>Partnered with Product, QA, and InfoSec to deliver secure and compliant payment APIs.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>TRIMS</h3>
+                            <p class="project-company">Infosys</p>
+                        </div>
+                        <span class="project-role-badge">Technology Analyst</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Aug 2018 &mdash; Jan 2020</span>
+                        <span>Pune, India</span>
+                        <span>Trade Finance</span>
+                    </div>
+                    <p class="project-desc">Trade record information management platform handling the lifecycle of trade finance instruments from registration through settlement and liquidation.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> Backend services across multiple trade finance modules, transaction processing, performance optimization, audit-compliant architecture.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>Oracle DB</span><span>REST APIs</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Developed Java-based backend services across multiple trade finance modules.</li>
+                        <li>Reduced transaction latency through code-level and SQL query optimizations.</li>
+                        <li>Contributed to architecture redesign for scalability and audit compliance.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>ClerisyHub</h3>
+                            <p class="project-company">ClerisyHub (Startup)</p>
+                        </div>
+                        <span class="project-role-badge">Founder &amp; Technology Lead</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Apr 2017 &mdash; Aug 2018</span>
+                        <span>Lucknow, India</span>
+                        <span>Ed-Tech</span>
+                    </div>
+                    <p class="project-desc">Unified educational management platform connecting institutes, students, and parents across attendance, homework, fees, announcements, results, and communication workflows.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> Web, Android, and desktop product ecosystem with institute operations, parent communication, and student lifecycle features.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>Spring Boot</span><span>Android</span><span>Angular</span><span>MySQL</span><span>REST APIs</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Owned the full product lifecycle from ideation to deployment.</li>
+                        <li>Designed and built the multi-platform ecosystem from scratch.</li>
+                        <li>Led product strategy, MVP development, user onboarding, and market testing.</li>
+                        <li>Hired and managed a cross-functional team to ship core features.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>G2C &mdash; Global Common V2.0 &amp; V3.0</h3>
+                            <p class="project-company">Tata Consultancy Services (Client: Citibank)</p>
+                        </div>
+                        <span class="project-role-badge">System Engineer</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Jan 2013 &mdash; Apr 2017</span>
+                        <span>Chennai, Gurgaon, Lucknow</span>
+                        <span>Enterprise Banking</span>
+                    </div>
+                    <p class="project-desc">Global banking consolidation initiative to bring country-specific applications into a unified codebase for broader enterprise rollout.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> Global Common V2.0 &amp; V3.0, middleware integrations, enterprise messaging, XML/XSLT transformations, SOA services.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>TIBCO BW</span><span>TIBCO EMS</span><span>Oracle DB</span><span>XML/XSLT</span><span>SOA</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Developed middleware integration components for global enterprise banking workflows.</li>
+                        <li>Supported the consolidation of country-specific applications into a unified global codebase.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card fade-up">
+                    <div class="project-card-header">
+                        <div>
+                            <h3>ITS &mdash; Intelligent Testing System</h3>
+                            <p class="project-company">Tata Consultancy Services (Client: Nielsen)</p>
+                        </div>
+                        <span class="project-role-badge">System Engineer</span>
+                    </div>
+                    <div class="project-card-meta">
+                        <span>Jan 2013 &mdash; Apr 2017</span>
+                        <span>Chennai, Gurgaon, Lucknow</span>
+                        <span>Test Automation</span>
+                    </div>
+                    <p class="project-desc">Automated testing system built to enable concurrent software testing while active product development continued.</p>
+                    <p class="project-scope"><strong>Relevant scope:</strong> Automation framework design, concurrent test execution, CI-oriented tooling, enterprise QA support.</p>
+                    <div class="tech-stack">
+                        <span>Java</span><span>Selenium</span><span>TestNG</span><span>Maven</span><span>Jenkins</span>
+                    </div>
+                    <h4 class="project-subtitle">My Contributions</h4>
+                    <ul class="timeline-details">
+                        <li>Developed automated testing frameworks for global enterprise clients.</li>
+                        <li>Built tooling that supported parallel testing alongside active development cycles.</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>

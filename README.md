@@ -204,4 +204,4 @@ St. Fidelis College | Completed 2008
 
 ---
 
-*13+ years experience | 16+ engineers managed | 20+ projects | 5 organizations*
+*13+ years experience | 16+ engineers managed | 7 major projects | 5 organizations*
