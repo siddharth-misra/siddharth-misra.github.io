@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.swp
+*.swo
+.env
+Siddharth-Misra-original.png

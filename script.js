@@ -231,3 +231,142 @@ if (statsSection && counters.length > 0) {
         animateCounters();
     }
 }
+
+// ===== Toast =====
+
+const toast = document.getElementById('successToast');
+const toastClose = document.getElementById('toastClose');
+const toastProg = document.getElementById('toastProgress');
+let toastTimer;
+
+function showContactToast() {
+    if (!toast || !toastProg) return;
+    clearTimeout(toastTimer);
+    toast.classList.remove('toast--hide');
+    toast.classList.add('toast--show');
+    toastProg.style.animationName = 'none';
+    toastProg.style.animationName = 'toastProgress';
+    toastProg.style.animationDuration = '5s';
+    toastProg.style.animationTimingFunction = 'linear';
+    toastProg.style.animationFillMode = 'forwards';
+    toastTimer = setTimeout(dismissToast, 5000);
+}
+
+function dismissToast() {
+    if (!toast) return;
+    clearTimeout(toastTimer);
+    toast.classList.replace('toast--show', 'toast--hide');
+    toast.addEventListener('animationend', () => toast.classList.remove('toast--hide'), { once: true });
+}
+
+if (toastClose) {
+    toastClose.addEventListener('click', dismissToast);
+}
+
+// ===== Contact Form =====
+
+(function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    const btn = document.getElementById('formSubmitBtn');
+    const btnText = btn.querySelector('.form-submit-text');
+    const successDiv = document.getElementById('formSuccess');
+    const errorMsg = document.getElementById('formError');
+    const sendAgain = document.getElementById('formSendAnother');
+    const counter = document.getElementById('msg-counter');
+    const textarea = document.getElementById('contact-message');
+
+    // ── Character counter ──────────────────────────────────────────
+    textarea.addEventListener('input', function () {
+        const len = this.value.length;
+        counter.textContent = len + ' / 1000';
+        counter.classList.toggle('counter-warn', len > 900);
+    });
+
+    // ── Per-field validation messages ──────────────────────────────
+    const validators = {
+        'contact-name':    { el: null, errEl: null, msg: 'Please enter your name.' },
+        'contact-email':   { el: null, errEl: null, msg: 'Please enter a valid email address.' },
+        'contact-message': { el: null, errEl: null, msg: 'Please write a message.' },
+    };
+
+    Object.keys(validators).forEach(id => {
+        const v = validators[id];
+        v.el = document.getElementById(id);
+        v.errEl = document.getElementById('err-' + id.replace('contact-', ''));
+        v.el.addEventListener('blur', () => validateField(v));
+        v.el.addEventListener('input', () => {
+            if (v.el.closest('.form-group').classList.contains('has-error')) validateField(v);
+        });
+    });
+
+    function validateField(v) {
+        const ok = v.el.checkValidity();
+        const group = v.el.closest('.form-group');
+        group.classList.toggle('has-error', !ok);
+        group.classList.toggle('is-valid', ok && v.el.value.trim() !== '');
+        v.errEl.textContent = ok ? '' : v.msg;
+    }
+
+    function validateAll() {
+        let allOk = true;
+        Object.values(validators).forEach(v => {
+            validateField(v);
+            if (!v.el.checkValidity()) allOk = false;
+        });
+        return allOk;
+    }
+
+    // ── Submission ─────────────────────────────────────────────────
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (!validateAll()) return;
+
+        btn.disabled = true;
+        btn.classList.add('loading');
+        btnText.textContent = 'Sending\u2026';
+        errorMsg.hidden = true;
+
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' }
+            });
+            if (res.ok) {
+                form.hidden = true;
+                successDiv.hidden = false;
+                successDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                showContactToast();
+            } else {
+                errorMsg.hidden = false;
+                btn.disabled = false;
+                btn.classList.remove('loading');
+                btnText.textContent = 'Send Message';
+            }
+        } catch (err) {
+            console.error('Form submission error:', err);
+            errorMsg.hidden = false;
+            btn.disabled = false;
+            btn.classList.remove('loading');
+            btnText.textContent = 'Send Message';
+        }
+    });
+
+    // ── Send another ───────────────────────────────────────────────
+    sendAgain.addEventListener('click', function () {
+        form.reset();
+        form.hidden = false;
+        successDiv.hidden = true;
+        btn.disabled = false;
+        btn.classList.remove('loading');
+        btnText.textContent = 'Send Message';
+        counter.textContent = '0 / 1000';
+        Object.values(validators).forEach(v => {
+            v.el.closest('.form-group').classList.remove('has-error', 'is-valid');
+            v.errEl.textContent = '';
+        });
+        form.querySelector('#contact-name').focus();
+    });
+})();
