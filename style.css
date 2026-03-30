@@ -247,6 +247,8 @@ img { max-width: 100%; display: block; }
 
 .nav-actions {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
@@ -1194,7 +1196,7 @@ a.cert-badge:hover {
 }
 
 /* ── Textarea + counter ── */
-.textarea-wrap { position: relative; }
+.textarea-wrap { position: relative; width: 100%; display: block; }
 
 .char-counter {
     position: absolute;
