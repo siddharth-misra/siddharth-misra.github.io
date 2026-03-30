@@ -517,7 +517,7 @@ a.cert-badge:hover {
 
 /* ===== Sections ===== */
 .section {
-    padding: 88px 0;
+    padding: 56px 0;
 }
 
 /* Improve first render by skipping below-the-fold layout/paint until needed */
@@ -529,6 +529,14 @@ a.cert-badge:hover {
 .section-alt {
     background: var(--bg-secondary);
 }
+
+/* Alternating section backgrounds: about=primary, contact=alt, skills=primary, experience=alt, education=primary, awards=alt */
+#about      { background: var(--bg-primary); }
+#contact    { background: var(--bg-secondary); }
+#skills     { background: var(--bg-primary); }
+#experience { background: var(--bg-secondary); }
+#education  { background: var(--bg-primary); }
+#awards     { background: var(--bg-secondary); }
 
 .section-title {
     font-size: 1.75rem;
@@ -1303,7 +1311,7 @@ html.js .fade-up.visible {
 
     .timeline-content { padding: 20px 18px; }
     .modules-grid { grid-template-columns: 1fr; }
-    .section { padding: 64px 0; }
+    .section { padding: 40px 0; }
     .section-title { font-size: 1.5rem; margin-bottom: 40px; }
     .skill-row { grid-template-columns: 140px 1fr; padding: 12px 16px; }
     .awards-grid { grid-template-columns: 1fr; }
