@@ -4,6 +4,7 @@ const prefersReducedMotion = globalThis.matchMedia('(prefers-reduced-motion: red
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
 const sections = document.querySelectorAll('section[id]');
 const fadeElements = document.querySelectorAll('.fade-up');
 const counters = document.querySelectorAll('.stat-number');
@@ -71,6 +72,20 @@ function setMenuOpen(open) {
     navLinks.classList.toggle('open', open);
     navToggle.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('menu-open', open);
+
+    if (navBackdrop) {
+        navBackdrop.classList.toggle('open', open);
+    }
+
+    if (open) {
+        // Move focus into sidebar so screen readers announce it
+        const firstLink = navLinks.querySelector('a');
+        if (firstLink) {
+            firstLink.focus();
+        }
+    } else {
+        navToggle.focus();
+    }
 }
 
 function updateNavScrollState() {
@@ -107,6 +122,10 @@ if (navToggle && navLinks) {
         setMenuOpen(!isOpen);
     });
 
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', () => setMenuOpen(false));
+    }
+
     navLinks.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
             setMenuOpen(false);
@@ -116,7 +135,6 @@ if (navToggle && navLinks) {
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && navLinks.classList.contains('open')) {
             setMenuOpen(false);
-            navToggle.focus();
         }
     });
 }

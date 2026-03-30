@@ -16,6 +16,35 @@ Engineering Manager with 13+ years of experience building scalable, cloud-native
 
 ---
 
+## Site Structure
+
+Single-page portfolio built with vanilla HTML, CSS, and JavaScript. No frameworks or build tools required.
+
+**Files:**
+- `index.html` — main page
+- `style.css` — all styles (light/dark theme via CSS variables)
+- `script.js` — scroll animations, mobile nav, theme toggle
+- `Siddharth-Misra.png` — profile photo
+
+**Page sections (in order):**
+1. Hero — name, title, certifications, stats
+2. About — bio and core competencies
+3. Skills — technical skills table
+4. Experience — professional timeline
+5. Education — degrees
+6. Awards & Recognition — award cards
+7. Contact — email, phone, GitHub, LinkedIn
+
+**Features:**
+- Light/dark theme toggle (persisted via `localStorage`)
+- Responsive mobile navigation
+- Scroll-triggered fade-in animations
+- Visitor counter via GoatCounter analytics
+- Alternating section backgrounds for visual separation
+- SEO: Open Graph, Twitter Card, JSON-LD structured data
+
+---
+
 ## Certifications
 
 - AWS Certified Solutions Architect
