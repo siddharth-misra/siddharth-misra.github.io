@@ -63,7 +63,7 @@ if (typeof prefersDark.addEventListener === 'function') {
     });
 }
 
-function setMenuOpen(open) {
+function setMenuOpen(open, returnFocus = false) {
     if (!navToggle || !navLinks) {
         return;
     }
@@ -83,7 +83,7 @@ function setMenuOpen(open) {
         if (firstLink) {
             firstLink.focus();
         }
-    } else {
+    } else if (returnFocus) {
         navToggle.focus();
     }
 }
@@ -134,7 +134,7 @@ if (navToggle && navLinks) {
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && navLinks.classList.contains('open')) {
-            setMenuOpen(false);
+            setMenuOpen(false, true);
         }
     });
 }
