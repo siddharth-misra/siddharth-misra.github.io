@@ -1554,11 +1554,13 @@ html.js .fade-up.visible {
     -webkit-backdrop-filter: blur(2px);
     z-index: 999;
     opacity: 0;
+    pointer-events: none;
     transition: opacity var(--transition);
 }
 
 .nav-backdrop.open {
     opacity: 1;
+    pointer-events: auto;
 }
 
 /* ===== Responsive ===== */
