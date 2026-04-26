@@ -1,3 +1,14 @@
+// ===== Auto-calculate years of experience =====
+const CAREER_START_YEAR = 2013;
+const yearsExp = new Date().getFullYear() - CAREER_START_YEAR;
+
+document.querySelectorAll('.years-exp').forEach((el) => {
+    if (el.dataset.startYear) {
+        el.dataset.count = String(yearsExp);
+    }
+    el.textContent = String(yearsExp);
+});
+
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = globalThis.matchMedia('(prefers-color-scheme: dark)');
 const prefersReducedMotion = globalThis.matchMedia('(prefers-reduced-motion: reduce)');

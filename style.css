@@ -514,48 +514,67 @@ a.cert-badge:hover {
 
 .hero-actions {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 56px;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 28px;
-    font-size: 0.9rem;
+    gap: 7px;
+    padding: 11px 22px;
+    font-size: 0.875rem;
     font-weight: 600;
+    line-height: 1;
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: var(--transition);
-    border: none;
+    border: 1px solid transparent;
     font-family: var(--font);
+    white-space: nowrap;
 }
 
 .btn-primary {
     background: var(--accent);
     color: var(--text-on-accent);
+    border-color: var(--accent);
     box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
 }
 
 .btn-primary:hover {
     background: var(--accent-dark);
+    border-color: var(--accent-dark);
     box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
     transform: translateY(-1px);
     color: var(--text-on-accent);
 }
 
 .btn-outline {
-    background: var(--bg-primary);
+    background: transparent;
     color: var(--text-primary);
-    border: 1px solid var(--border);
+    border-color: var(--border);
 }
 
 .btn-outline:hover {
     border-color: var(--accent);
     color: var(--accent);
     background: var(--accent-bg);
+    transform: translateY(-1px);
+}
+
+.btn-tutorials {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+.btn-tutorials:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-bg);
+    transform: translateY(-1px);
 }
 
 .hero-stats {
