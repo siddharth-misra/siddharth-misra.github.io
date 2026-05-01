@@ -123,8 +123,10 @@ End-to-end loan origination system for banks, NBFCs, and fintechs — covering t
 - Designed the microservices architecture — decomposing the loan lifecycle into independently deployable services with high-throughput processing
 - Established workflow orchestration for loan processing flows and configurable credit eligibility rules, significantly reducing manual intervention
 - Integrated third-party APIs for KYC (UIDAI, CKYC), credit bureaus (CIBIL, Experian), and e-sign providers with retry, idempotency, and audit logging
-- Piloting LLM-based document extraction to reduce underwriting review time; agentic workflow POC in active evaluation
+- - Driving AI-first initiatives — evaluating agentic AI use cases for the Loan Origination System
 - Leading Agile/SAFe ceremonies, code reviews, and engineering standards across the team
+- Designed and implemented a scalable event-driven architecture for loan workflows, enabling reliable asynchronous processing and portfolio-specific configurable workflows.
+- Architected and integrated agentic LOS use cases from scratch, including KYC OCR, speech-to-text, and bank statement analysis, using AWS Bedrock.
 
 ---
 

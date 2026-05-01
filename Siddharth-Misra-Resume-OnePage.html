@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   @page {
-    size: letter;
+    size: A4;
     margin: 0;
   }
 
@@ -25,8 +25,8 @@
     line-height: 1.4;
     color: #2d2d2d;
     text-align: justify;
-    max-width: 8.5in;
-    min-height: 11in;
+    max-width: 8.27in;
+    min-height: 11.69in;
     margin: 0 auto;
     position: relative;
     background: #fff;
@@ -36,7 +36,7 @@
     body {
       padding: 0;
       font-size: 8.5pt;
-      height: 11in;
+      height: 11.69in;
       overflow: hidden;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -46,12 +46,12 @@
   /* Two-column layout */
   .resume-container {
     display: flex;
-    min-height: 11in;
+    min-height: 11.69in;
   }
 
   @media print {
     .resume-container {
-      max-height: 11in;
+      max-height: 11.69in;
     }
   }
 
@@ -60,7 +60,7 @@
     width: 34%;
     background: #f0f2f5;
     color: #2d2d2d;
-    padding: 0.4in 0.3in;
+    padding: 0.35in 0.28in;
     position: relative;
     border-right: 1.5pt solid #d0d4da;
   }
@@ -68,7 +68,7 @@
   /* Right main column (wide) */
   .right-column {
     width: 66%;
-    padding: 0.4in;
+    padding: 0.35in;
     position: relative;
   }
 
@@ -270,7 +270,7 @@
 
   /* Job entries in right column */
   .job {
-    margin-bottom: 8pt;
+    margin-bottom: 6pt;
     page-break-inside: avoid;
   }
 
@@ -468,8 +468,10 @@
         <li>Leading a team of 20+ engineers across frontend, backend, and platform, driving end-to-end delivery from architecture to production</li>
         <li>Designing microservices architecture, decomposing the loan lifecycle into independently deployable services with event-driven communication via Kafka and SQS</li>
         <li>Integrating third-party APIs for KYC (UIDAI, CKYC), credit bureaus (CIBIL, Experian), and e-sign providers with retry, idempotency, and audit logging</li>
-        <li>Driving AI-first initiatives - evaluating LLM-based document extraction and agentic workflows to accelerate underwriting turnaround</li>
+        <li>Driving AI-first initiatives - evaluating agentic AI usecases for Loan Origination System.</li>
         <li>Establishing engineering standards, leading Agile/SAFe ceremonies, and instituting code review practices across the team</li>
+        <li>Designed and implemented scalable event-driven architecture for loan workflows enabling reliable async processing and portfolio-specific configurable workflows</li>
+        <li>Architected agentic LOS use cases from scratch &mdash; KYC OCR, speech-to-text, and bank statement analysis &mdash; using AWS Bedrock</li>
       </ul>
     </div>
 
