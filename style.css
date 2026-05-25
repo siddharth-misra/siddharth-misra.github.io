@@ -395,7 +395,7 @@ img { max-width: 100%; display: block; }
 
 .hero-title + .hero-badge {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .hero-title {
@@ -411,7 +411,7 @@ img { max-width: 100%; display: block; }
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 auto 22px;
+    margin: 0 auto 8px;
     max-width: 580px;
     text-align: center;
     line-height: 1.45;
@@ -455,8 +455,12 @@ img { max-width: 100%; display: block; }
 
 .hero-location {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 36px;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
 }
 
 .cert-badge {
@@ -477,6 +481,14 @@ img { max-width: 100%; display: block; }
 .cert-badge svg {
     color: var(--green);
     flex-shrink: 0;
+}
+
+.cert-badge-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 2px;
 }
 
 a.cert-badge {
@@ -781,6 +793,63 @@ a.cert-badge:hover {
     font-weight: 500;
     color: var(--text-secondary);
     font-family: var(--font-mono);
+}
+
+.open-role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.open-role-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-right: 4px;
+}
+
+.open-role-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.75); }
+}
+
+.open-role-tags-contact {
+    margin: -20px auto 24px;
+    max-width: 540px;
+}
+
+.tag-open-role {
+    background: var(--green-bg);
+    border-color: color-mix(in srgb, var(--green) 30%, var(--border));
+    color: var(--green);
+    font-weight: 500;
+    font-family: var(--font);
+    font-size: 0.72rem;
+    padding: 3px 10px;
+}
+
+[data-theme="dark"] .tag-open-role {
+    border-color: color-mix(in srgb, var(--green) 40%, var(--border));
 }
 
 /* ===== Experience / Timeline ===== */
